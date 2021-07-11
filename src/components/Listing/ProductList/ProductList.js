@@ -14,7 +14,7 @@ const ProductList = ({products, loading}) => {
     return(
         <div className={styles.container}>
             {loading && <LoadingIndicator />}
-            {renderProducts()}
+            {loading || renderProducts()}
         </div>
     )
 }

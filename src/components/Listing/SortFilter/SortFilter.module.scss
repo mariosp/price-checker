@@ -8,3 +8,17 @@
   color: var(--text-color);
   border: var(--primary-color) solid 1px;
 }
+
+.filtering {
+  margin: 10px 0;
+  input{
+    border: var(--primary-color) 1px solid;
+    color: var(--text-color);
+    width: 150px;
+    height: 30px;
+  }
+  span{
+    margin: 0 5px;
+    color: var(--text-color);
+  }
+}
