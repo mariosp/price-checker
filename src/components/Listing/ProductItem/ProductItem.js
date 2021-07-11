@@ -1,20 +1,26 @@
 import React from "react";
 import styles from "./ProductItem.module.scss"
 import {convertCentToEuro} from "../../../services/priceService";
+import {useHistory} from "react-router-dom";
 
 
 const ProductItem = ({product}) => {
-    const {image_url, title, excerpt, price} = product;
+    const history = useHistory();
+    const {image_url, title, excerpt, price, id} = product;
 
    const [manufacturerHtml, ...details] = excerpt && excerpt.length? excerpt.split(",") : ["", ""];
    const manufacturer = manufacturerHtml.replace(/<\/?[^>]+(>|$)/g, "");
 
    const detailsJoined = details.join(", ");
 
+   const handleClick = () => history.push({
+       pathname: "/product/" + id,
+       state: product
+   })
 
     return (
         <div className={styles.container}>
-            <div className={styles.card}>
+            <div className={styles.card} onClick={handleClick}>
                 <div className={styles.content}>
                     <div className={styles.image}>
                         <img src={image_url} alt={"test"} />

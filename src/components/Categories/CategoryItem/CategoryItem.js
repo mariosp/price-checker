@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import styles from "./CategoryItem.module.scss";
 import {useHistory} from "react-router-dom";
 

@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import styles from "./ListingPage.module.scss";
-import {useParams} from "react-router-dom";
 import {getCategoryDetails, getCategoryProducts} from "../../services/categoriesApi";
 import Title from "../../components/Title/Title";
 import SortFilter from "../../components/Listing/SortFilter/SortFilter";
@@ -9,9 +8,9 @@ import Pagination from "../../components/Pagination/Pagination";
 import {convertCentToCurrencyFormat, convertStringCurrencyToCents} from "../../services/priceService";
 
 
-const ListingPage = () => {
+const ListingPage = (props) => {
     // listingPage
-    let { id } = useParams();
+    let { id } = props.match.params;
     const [category, setCategory] = useState({});
 
     // SortFilter
@@ -33,12 +32,12 @@ const ListingPage = () => {
 
     //ProductList
     const [products, setProducts] = useState([]);
-    const [productsNextPage, setProductsNextPage] = useState([]);
+    const [setProductsNextPage] = useState([]);
     const [loading, setLoading] = useState(true);
 
     //Pagination
     const [currentPage, setCurrentPage] = useState(1);
-    const [pageSize, setPageSize]= useState(15);
+    const [pageSize]= useState(15);
     const [hasNextPage, setHasNextPage] = useState(false);
 
 
