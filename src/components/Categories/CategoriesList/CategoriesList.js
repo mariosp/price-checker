@@ -20,11 +20,13 @@ const CategoriesList = () => {
           setCategories(sortedData)
           setLoading(false);
         })()
+
+        return ()=> console.log("unmount")
     },[])
 
     const renderCategories = () => {
       return categories.map(category => (
-            <CategoryItem key={category.id} title={category.title} image={category.image_url} />
+            <CategoryItem key={category.id} data={category} />
       ))
     }
 

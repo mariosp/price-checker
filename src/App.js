@@ -4,21 +4,28 @@ import MainContainer from "./layouts/MainContainer/MainContainer";
 import Header from "./components/Header/Header";
 import {
     BrowserRouter as Router,
-    Switch,
     Route,
 } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
+import ListingPage from "./pages/ListingPage/ListingPage";
+import CacheRoute, {CacheSwitch} from "react-router-cache-route";
 
 const App = () => {
   return (
     <MainContainer>
         <Header/>
         <Router>
-            <Switch>
-                <Route path="/">
-                    <HomePage />
+            <CacheSwitch>
+                <CacheRoute exact path="/" >
+                    <HomePage/>
+                </CacheRoute>
+                <Route path="/category/:id" >
+                    <ListingPage />
                 </Route>
-            </Switch>
+                {/*<Route path="*">*/}
+                {/*   <div>NO MATCH</div>*/}
+                {/*</Route>*/}
+            </CacheSwitch>
         </Router>
     </MainContainer>
   );

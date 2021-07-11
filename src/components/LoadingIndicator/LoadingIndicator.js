@@ -5,7 +5,7 @@ const LoadingIndicator = () => {
 
     return (
         <div className={styles.wrapper}>
-            <img src="./images/loading.svg" className={styles.loadingImage}/>
+            <img src="/images/loading.svg" className={styles.loadingImage} alt="loading"/>
         </div>
     )
 }
