@@ -21,13 +21,9 @@ const App = () => {
                     <HomePage/>
                 </CacheRoute>
                 <CacheRoute path="/category/:id" render={(props)=> <ListingPage {...props} />} >
-                    {/*<ListingPage />*/}
                 </CacheRoute>
                 <Route path="/product/:id" render={(props)=> <DetailsPage {...props} />} >
                 </Route>
-                {/*<Route path="*">*/}
-                {/*   <div>NO MATCH</div>*/}
-                {/*</Route>*/}
             </CacheSwitch>
         </Router>
     </MainContainer>

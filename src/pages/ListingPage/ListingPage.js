@@ -6,6 +6,7 @@ import SortFilter from "../../components/Listing/SortFilter/SortFilter";
 import ProductList from "../../components/Listing/ProductList/ProductList";
 import Pagination from "../../components/Pagination/Pagination";
 import {convertCentToCurrencyFormat, convertStringCurrencyToCents} from "../../services/priceService";
+import NavigationButton from "../../components/NavigationButton/NavigationButton";
 
 
 const ListingPage = (props) => {
@@ -32,7 +33,7 @@ const ListingPage = (props) => {
 
     //ProductList
     const [products, setProducts] = useState([]);
-    const [setProductsNextPage] = useState([]);
+    const [ productsNextPage ,setProductsNextPage] = useState([]);
     const [loading, setLoading] = useState(true);
 
     //Pagination
@@ -72,19 +73,27 @@ const ListingPage = (props) => {
         })()
     }, [products])
 
+    const handleBack = () => {
+        if (props.history.action !== 'POP') return props.history.goBack();
+        props.history.push("/");
+    }
+
     return (
-       <div className={styles.container}>
-           <Title title={category.title} subtitle={category.products_count} />
-           <SortFilter
-               onChange={handleOnChangeSorting}
-               selectedSorting={selectedSorting}
-               selectedOrdering={selectedOrdering}
-               priceFilter={priceFilter}
-               onBlur={handleFilterBlur}
-           />
-           <ProductList products={products} loading={loading} />
-           <Pagination setCurrentPage={setCurrentPage} currentPage={currentPage} hasNextPage={hasNextPage}/>
-       </div>
+        <>
+            <NavigationButton handler={handleBack} />
+           <div className={styles.container}>
+               <Title title={category.title} subtitle={category.products_count} />
+               <SortFilter
+                   onChange={handleOnChangeSorting}
+                   selectedSorting={selectedSorting}
+                   selectedOrdering={selectedOrdering}
+                   priceFilter={priceFilter}
+                   onBlur={handleFilterBlur}
+               />
+               <ProductList products={products} loading={loading} />
+               <Pagination setCurrentPage={setCurrentPage} currentPage={currentPage} hasNextPage={hasNextPage}/>
+           </div>
+        </>
     );
 }
 
