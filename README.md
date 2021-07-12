@@ -4,7 +4,7 @@ PriceChecker
 
 <p align="center">React<p>
 
-### A simple prices checker
+### A simple price checker
 
 ![Heroku](https://heroku-badge.herokuapp.com/?app=price-checker-mp)
 
