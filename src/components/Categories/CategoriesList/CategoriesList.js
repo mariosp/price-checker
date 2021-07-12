@@ -16,12 +16,9 @@ const CategoriesList = () => {
               if(a.position > b.position) return 1;
               return 0;
           })
-            console.log(sortedData);
           setCategories(sortedData)
           setLoading(false);
         })()
-
-        return ()=> console.log("unmount")
     },[])
 
     const renderCategories = () => {

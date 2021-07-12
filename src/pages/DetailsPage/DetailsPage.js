@@ -6,7 +6,6 @@ import {convertCentToEuro} from "../../services/priceService";
 import NavigationButton from "../../components/NavigationButton/NavigationButton";
 
 const DetailsPage = (props) => {
-    console.log(props)
     const { id } = props.match.params;
     const productState = props.location.state;
     const [product, setProduct] = useState(productState);

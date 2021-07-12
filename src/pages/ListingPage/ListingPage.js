@@ -27,7 +27,6 @@ const ListingPage = (props) => {
     }
 
     const handleFilterBlur = (min, max) => {
-        console.log(min, max)
         setPriceFilter({min, max});
     }
 
@@ -57,7 +56,6 @@ const ListingPage = (props) => {
         const max = convertStringCurrencyToCents(priceFilter.max);
         (async () => {
             const response = await getCategoryProducts(id, selectedOrdering, selectedSorting, pageSize, currentPage,min, max);
-            console.log(response)
             setProducts(response.data);
             setLoading(false);
         })()

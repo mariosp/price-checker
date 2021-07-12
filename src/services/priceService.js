@@ -6,10 +6,6 @@ export const convertCentToCurrencyFormat= (cents)=>{
     return (cents / 100);
 }
 
-export const convertCurrencyToCents= (currency)=>{
-    return (currency * 100);
-}
-
 export const convertStringCurrencyToCents= (currency) =>{
    return parseFloat(currency) * 100;
 }

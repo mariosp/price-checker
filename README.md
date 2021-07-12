@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+<h1 align="center">
+PriceChecker
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">React<p>
 
-## Available Scripts
+### A simple prices checker
 
-In the project directory, you can run:
+![Heroku](https://heroku-badge.herokuapp.com/?app=price-checker-mp)
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### `yarn test`
+> You need to have Node installed to run the project locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation and running
 
-### `yarn build`
+Install dependencies
+```sh
+$ npm install
+```
+To start the app run
+```sh
+$ npm start
+```
+React pricecheker-app : http://localhost:3000
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Test the app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You can preview the app on heroku: 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[pricecheker](https://price-checker-mp.herokuapp.com/)
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Application Screenshots
+ 
+Desktop
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Home
+<img width="1536" alt="Screenshot 2021-07-12 at 8 12 09 AM" src="https://user-images.githubusercontent.com/3619970/125234192-dd6b0300-e2e8-11eb-8ed6-d5024b57ab49.png">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Categories
+<img width="1536" alt="Screenshot 2021-07-12 at 8 12 30 AM" src="https://user-images.githubusercontent.com/3619970/125234220-eb208880-e2e8-11eb-85bb-f359430b92d3.png">
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Product Details
+<img width="1536" alt="Screenshot 2021-07-12 at 8 12 53 AM" src="https://user-images.githubusercontent.com/3619970/125234239-f8d60e00-e2e8-11eb-896c-ef5ae9ead096.png">
 
-## Learn More
+##
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Mobile
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img width="330" alt="Screenshot 2021-07-12 at 8 16 06 AM" src="https://user-images.githubusercontent.com/3619970/125234443-6bdf8480-e2e9-11eb-8e1a-9a291da8dfd6.png">
 
-### Code Splitting
+<img width="330" alt="Screenshot 2021-07-12 at 8 16 24 AM" src="https://user-images.githubusercontent.com/3619970/125234458-769a1980-e2e9-11eb-80fe-87192f86cc95.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<img width="330" alt="Screenshot 2021-07-12 at 8 16 39 AM" src="https://user-images.githubusercontent.com/3619970/125234471-7ef25480-e2e9-11eb-8f3f-58b7ebd61b27.png">
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
